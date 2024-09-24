@@ -1,0 +1,163 @@
+:root {
+/** MIDNIGHT LAVENDER */
+--color-primary-200: #a235b6;
+--color-primary-500: #c885d2;
+--color-primary-600: #d49ddb;
+
+--color-surface-100: #0b0129;
+--color-surface-300: #3a3553;
+--color-surface-400: #534f6a;
+--color-surface-600: #898599;
+
+--color-surface-mixed-600: #91899e;
+
+--color-p: #e4e3e8;
+
+--bg-2: #0c0425;
+--bg-3: #0e0722;
+--bg-4: #100a1f;
+--bg-5: #110d1c;
+
+/* SUBTLE DARK MODE */
+--color-primary-200: #87b9ff;
+--color-primary-500: #71afff;
+--color-primary-600: #58a6ff;
+
+--color-surface-100: #54565b;
+--color-surface-300: #3b3e43;
+--color-surface-400: #24272c;
+--color-surface-600: #0d1117;
+
+--color-surface-mixed-600: #0e1218;
+
+--color-p: #c9d1d9;
+
+--bg-2: #5a5e64;
+--bg-3: #42464d;
+--bg-4: #2b3037;
+--bg-5: #161b22;
+}
+
+body {
+	background-color: var(--bg-5);
+}
+
+.banner {
+	position: fixed;
+	top: 0px;
+	color: var(--color-surface-600);
+	width: 100%;
+	z-index: 10;
+	text-align: center;
+	margin: 0rem;
+	animation: banner-anim linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0vh 60vh;
+}
+
+#bannercolor {
+	background-color: var(--color-surface-300);
+	border-radius: 0px 0px 12px 12px;
+}
+
+#bannericons {
+	padding: 0rem 0rem 0rem 0rem;
+}
+
+#bannericons ul {
+	color: transparent;
+	margin: 0%;
+}
+
+#bannericons li {
+	float: left;
+}
+
+#bannericons img {
+	width: 65px;
+	animation: banner-img-anim linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0vh 60vh;
+}
+
+#bannercontent {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	vertical-align: middle;
+	color: var(--color-primary-200);
+}
+
+#banneranim {
+	font-size: 50px;
+	animation: banner-header-anim linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0vh 60vh;
+}
+
+@keyframes banner-anim {
+	from {
+		/*background-color: var(--color-surface-300);*/
+		opacity: 100%;
+	}
+	to {
+		/*background-color: #24203bdf;*/ /* --color-surface-200+df for transparency */
+		opacity: 85% /* DF in decimal is 223, max is 255, so should be around 87.some% */
+	}
+}
+
+@keyframes banner-img-anim {
+	from {
+		padding: 2rem 0rem 0rem 0rem;
+		width: 65px;
+	}
+	to {
+		padding: 1rem 0rem 0rem 0rem;
+		/*width: 35px;*/
+		/* New Stuff */
+		width: 50px;
+	}
+}
+
+@keyframes banner-header-anim {
+	from {
+		font-size: 50px;
+	}
+	to {
+		font-size: 30px;
+	}
+}
+
+#homecontent {
+	padding: 2.5rem 0rem 0rem 0rem;
+	animation: banner-contactme-padding-anim linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0vh 60vh;
+}
+
+#home {
+	font-size: 35px;
+	color: var(--color-primary-200);
+	text-decoration: none;
+	animation: banner-contactme-anim linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0vh 60vh;
+}
+
+@keyframes banner-contactme-padding-anim {
+	from {
+		padding: 2.5rem 0rem 0rem 0rem;
+	}
+	to {
+		padding: 1.5rem 0rem 0rem 0rem;
+	}
+}
+
+@keyframes banner-contactme-anim {
+	from {
+		font-size: 35px;
+	}
+	to {
+		font-size: 20px;
+	}
+}

@@ -112,6 +112,10 @@
 	font-style: oblique;
 }
 
+.darkbg {
+	background-color: var(--bg-5);
+}
+
 .banner {
 	position: fixed;
 	top: 0px;
@@ -131,31 +135,32 @@
 }
 
 #bannericons {
-	padding: 0rem 0rem 0rem 0rem;
+	padding: 0rem;
 }
 
 #bannericons ul {
 	color: transparent;
-	margin: 0%;
-}
-
-#bannericons li {
-	float: left;
+	margin: auto;
+	display: flex;
+	justify-content: center;
 }
 
 #bannericons img {
 	width: 65px;
+	/*padding: 2rem 0rem 0rem 0rem;*/
 	animation: banner-img-anim linear forwards;
 	animation-timeline: scroll();
 	animation-range: 0vh 60vh;
 }
 
 #bannercontent {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: center;
 	vertical-align: middle;
 	color: var(--color-primary-200);
+
+	align-items: center;
 }
 
 #banneranim {
@@ -178,14 +183,14 @@
 
 @keyframes banner-img-anim {
 	from {
-		padding: 2rem 0rem 0rem 0rem;
+		/*padding: 2rem 0rem 0rem 0rem;*/
 		width: 65px;
 	}
 	to {
-		padding: 1rem 0rem 0rem 0rem;
-		/*width: 35px;*/
+		/*padding: 1rem 0rem 0rem 0rem;*/
+		width: 35px;
 		/* New Stuff */
-		width: 50px;
+		/*width: 50px;*/
 	}
 }
 
@@ -199,10 +204,10 @@
 }
 
 #contactcontent {
-	padding: 2.5rem 0rem 0rem 0rem;
-	animation: banner-contactme-padding-anim linear forwards;
+	/*padding: 2.5rem 0rem 0rem 0rem;*/
+	/*animation: banner-contactme-padding-anim linear forwards;
 	animation-timeline: scroll();
-	animation-range: 0vh 60vh;
+	animation-range: 0vh 60vh;*/
 }
 
 #contactme {
@@ -212,15 +217,6 @@
 	animation: banner-contactme-anim linear forwards;
 	animation-timeline: scroll();
 	animation-range: 0vh 60vh;
-}
-
-@keyframes banner-contactme-padding-anim {
-	from {
-		padding: 2.5rem 0rem 0rem 0rem;
-	}
-	to {
-		padding: 1.5rem 0rem 0rem 0rem;
-	}
 }
 
 @keyframes banner-contactme-anim {
@@ -280,14 +276,14 @@
 	padding: 3% 0% 5% 0%;
 }
 
-#twocolumn {
+.twocolumn {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: auto auto;
 	margin: 0% 10%;
 }
 
-#twocolumn .bodycontent {
+.twocolumn .bodycontent {
 	margin: 5%;
 }
 
@@ -296,7 +292,7 @@
 		margin: 0% 20%;
 	}
 
-	#twocolumn {
+	.twocolumn {
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-template-rows: auto;
@@ -324,7 +320,7 @@
 
 .projectwrapper {
 	margin: auto;
-	width: 90%;
+	width: 100%;
 	padding-top: 15px;
 }
 
@@ -385,12 +381,21 @@
 	width: 100%;
 	/* New Stuff */
 	padding: 1rem 0rem;
+	margin: auto;
+}
+
+.projectcontent h2 {
+	text-align: center;
 }
 
 .projectcontent h3 {
 	text-align: center;
 	color: var(--color-surface-mixed-600);
 	margin: 0%;
+}
+
+.projectcontent p {
+	padding: 0% 5%;
 }
 
 @media (min-width: 1024px) {
@@ -444,6 +449,49 @@
 
 .skillicon {
 	width: 65px;
+}
+
+/* Contact Me page */
+.info {
+	margin-top: 10%;
+}
+
+.contactinfo {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin: 0% 10%;
+	justify-content: center;
+	text-align: center;
+	font-size: 20pt;
+}
+
+.contactinfo input {
+	font-family: consolas, sans-serif, monospace;
+	font-size: 20pt;
+	height: 3em;
+	margin-bottom: 1em;
+	border-bottom: 4px solid var(--color-primary-200);
+	border-right: 4px solid var(--color-primary-200);
+}
+
+.contactinfo textarea {
+	font-family: consolas, sans-serif, monospace;
+	font-size: 20pt;
+	height: 8em;
+	margin-bottom: 1em;
+	border-bottom: 4px solid var(--color-primary-200);
+	border-right: 4px solid var(--color-primary-200);
+}
+
+.contactinfo button {
+	font-family: consolas, sans-serif, monospace;
+	font-size: 20pt;
+	width: 30%;
+	height: 2em;
+	text-align: center;
+	color: var(--color-primary-500);
+	background-color: var(--color-surface-400);
 }
 
 h1 {
