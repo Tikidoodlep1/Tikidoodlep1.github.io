@@ -494,6 +494,7 @@
 	background-color: var(--color-surface-400);
 }
 
+/* HTML Tags */
 h1 {
 	font-size: 50px;
 	font-family: monospace;
@@ -531,6 +532,10 @@ img {
 	color: white;
 }
 
+section {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--color-surface-100);
 	margin: 0px;
@@ -540,10 +545,12 @@ body {
 footer {
 	text-align: center;
 	color: var(--color-surface-600);
+	background-color: var(--color-surface-300);
 	font-size: 0.9rem;
 }
 
 html {
+	scroll-behavior: smooth;
 	margin: 0px;
 	padding: 0px;
 }
