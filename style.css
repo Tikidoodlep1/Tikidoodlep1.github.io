@@ -21,7 +21,7 @@
 /* SUBTLE DARK MODE */
 --color-primary-200: #87b9ff;
 --color-primary-500: #71afff;
---color-primary-600: #58a6ff;
+--color-primary-600: #89a9cd;/* #58a6ff; */
 
 --color-surface-100: #54565b;
 --color-surface-300: #3b3e43;
@@ -352,12 +352,11 @@
 }
 
 .projectlink a {
-	border: 4px double var(--color-primary-600);
+	border: 4px double var(--color-primary-500);
 	text-align: center;
 	padding: 0.1rem 1rem;
 	font-size: 1.5rem;
-	text-decoration: none;
-	color: var(--color-surface-mixed-600);
+	color: var(--color-primary-600);
 }
 
 .projectimg {
@@ -390,7 +389,7 @@
 
 .projectcontent h3 {
 	text-align: center;
-	color: var(--color-surface-mixed-600);
+	color: var(--color-primary-600);
 	margin: 0%;
 }
 
@@ -437,7 +436,7 @@
 }
 
 .skills p {
-	color: var(--color-primary-600);
+	color: var(--color-primary-500);
 }
 
 .iconbox {
@@ -508,20 +507,21 @@ h2 {
 
 h3 {
 	font-size: 40px;
-	font-family: sans-serif;
+	font-family: monospace;
 	font-weight: 800;
 }
 
 h4 {
 	font-size: 35px;
-	font-family: sans-serif;
+	font-family: monospace;
 	border-bottom: 3px double var(--color-surface-400);
 	margin: 0% 0% 0.5% 0%;
 	padding: 0%;
 }
 
 p {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
+	line-height: 1.5em;
 }
 
 table, tr, th {
@@ -544,7 +544,7 @@ body {
 
 footer {
 	text-align: center;
-	color: var(--color-surface-600);
+	color: var(--color-primary-600);
 	background-color: var(--color-surface-300);
 	font-size: 0.9rem;
 }
