@@ -358,10 +358,12 @@
 }
 
 .projectlink ul {
+	margin: 0%;
+	padding: 0% 5%;
 	color: transparent;
 	display: flex;
 	flex-flow: row wrap;
-	/*justify-content: space-around;*/
+	justify-content: center;
 }
 
 .projectlink li {
